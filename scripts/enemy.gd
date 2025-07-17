@@ -22,6 +22,9 @@ func _physics_process(delta: float) -> void:
 	else:
 		$AnimatedSprite2D.play("front_idle")
 
+func enemy():
+	pass
+
 func _on_detection_area_body_entered(body: Node2D) -> void:
 	player = body
 	player_chase = true
@@ -44,6 +47,3 @@ func handle_damage():
 		print("enemy health = ", health)
 		if health <= 0:
 			self.queue_free()
-
-func enemy():
-	pass

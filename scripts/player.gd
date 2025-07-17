@@ -85,6 +85,9 @@ func _on_player_hitbox_body_entered(body: Node2D) -> void:
 	if body.has_method("enemy"):
 		enemy_inattack_range = true
 
+func player():
+	pass
+
 func _on_player_hitbox_body_exited(body: Node2D) -> void:
 	if body.has_method("enemy"):
 		enemy_inattack_range = false
@@ -99,8 +102,3 @@ func enemy_attack():
 
 func _on_attack_cooldown_timeout() -> void:
 	enemy_attack_cooldown = true
-
-
-
-func player():
-	pass
